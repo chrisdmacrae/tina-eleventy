@@ -1,9 +1,17 @@
 {
   "compilerOptions": {
-    "module": "ES2015",
+    "module": "ESNext",
     "moduleResolution": "node",
     "target": "ESNext",
     "allowJs": true,
-    "allowSyntheticDefaultImports": true
-  }
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/cms/*.ts",
+    "src/cms/*.tsx"
+  ],
+  "exclude": ["node_modules"]
 }
