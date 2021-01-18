@@ -1,0 +1,23 @@
+{
+  "name": "tina-eleventy",
+  "version": "0.1.0",
+  "description": "A proof of concept of editing an eleventy site with Tina",
+  "main": "null",
+  "scripts": {
+    "start": "npx vercel dev",
+    "build": "npx @11ty/eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "react": "^17.0.1",
+    "tinacms": "^0.34.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@vercel/node": "^1.9.0",
+    "vercel": "^21.1.0"
+  }
+}

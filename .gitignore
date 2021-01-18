@@ -1,0 +1,7 @@
+.vercel
+dist
+.eleventy
+.vercel
+node_modules
+*.log
+.DS_Store
