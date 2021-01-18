@@ -6,6 +6,10 @@ import { join } from 'path'
 const SERVERLESS_INPUT = join(process.cwd(), "/.eleventy/input");
 const SERVERLESS_OUTPUT = join(process.cwd() + '/.eleventy/output');
 
+// TODO: figure out how to propogate changes back to this function
+//       likely will require posting the updated data and then writing
+//       the local file back to the serverless input
+//       this means this likely won't work for multiple users... womp womp
 export default async function getPage(req: NowRequest, res: NowResponse) {
   try {
     const slug = req.query['slug'] as string

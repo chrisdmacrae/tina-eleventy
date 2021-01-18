@@ -8,7 +8,7 @@
     "dev": "npx npm-run-all --sequential build:serverless-11ty --parallel dev:* dev:*",
     "dev:cms": "npx webpack -c webpack.config.js --watch --mode development",
     "dev:11ty": "npx @11ty/eleventy --serve --watch --port $PORT",
-    "build": "npx npm-run-all dev:build",
+    "build": "npx npm-run-all --sequential build:*",
     "build:cms": "npx webpack -c webpack.config.js --mode production",
     "build:serverless-11ty": "cp -r src .eleventy/input",
     "build:11ty": "npx @11ty/eleventy",
