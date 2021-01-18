@@ -10,7 +10,7 @@
     "dev:11ty": "npx @11ty/eleventy --serve --watch --port $PORT",
     "build": "npx npm-run-all --sequential build:*",
     "build:cms": "npx webpack -c webpack.config.js --mode production",
-    "build:serverless-11ty": "cp -r src .eleventy/input",
+    "build:serverless-11ty": "mkdir dist/.eleventy && cp -r src dist/.eleventy/input",
     "build:11ty": "npx @11ty/eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

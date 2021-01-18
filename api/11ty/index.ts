@@ -3,8 +3,8 @@ import Eleventy from '@11ty/eleventy'
 import { readFileSync } from 'fs'
 import { join } from 'path'
 
-const SERVERLESS_INPUT = join(process.cwd(), "/.eleventy/input");
-const SERVERLESS_OUTPUT = join(process.cwd() + '/.eleventy/output');
+const SERVERLESS_INPUT = join(process.cwd(), "/dist/.eleventy/input");
+const SERVERLESS_OUTPUT = join(process.cwd() + '/dist/.eleventy/output');
 
 // TODO: figure out how to propogate changes back to this function
 //       likely will require posting the updated data and then writing
