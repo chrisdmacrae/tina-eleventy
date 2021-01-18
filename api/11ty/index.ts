@@ -1,6 +1,6 @@
 import { NowRequest, NowResponse } from '@vercel/node'
 import Eleventy from '@11ty/eleventy'
-import { readFile } from 'fs/promises'
+import { readFileSync } from 'fs'
 import { join } from 'path'
 
 const SERVERLESS_INPUT = join(process.cwd(), "/.eleventy/input");
@@ -17,7 +17,7 @@ export default async function getPage(req: NowRequest, res: NowResponse) {
     const eleventy = new Eleventy(SERVERLESS_INPUT, SERVERLESS_OUTPUT);
     const data = await eleventy.init();
     const output = await eleventy.write();
-    const slugContents = await readFile(join(SERVERLESS_OUTPUT, fileRelativePath), { encoding: 'utf-8' });
+    const slugContents = readFileSync(join(SERVERLESS_OUTPUT, fileRelativePath), { encoding: 'utf-8' });
 
     res
       .json({
