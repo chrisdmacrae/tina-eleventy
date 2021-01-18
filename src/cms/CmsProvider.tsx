@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react'
 import { TinaCMS, TinaProvider } from 'tinacms'
 import { EditablePage } from './EditablePage'
-import { ContentFrame } from './ServerlessFrame'
 
 export interface CmsProviderProps {
   editMode?: boolean

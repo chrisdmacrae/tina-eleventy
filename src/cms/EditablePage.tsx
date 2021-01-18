@@ -1,6 +1,6 @@
 import React from "react"
 import { useForm, usePlugin } from "tinacms"
-import { ContentFrame } from "./ServerlessFrame"
+import { RemoteContentFrame } from "./RemoteContentFrame"
 
 export function EditablePage({ slug }) {
   const [, form] = useForm({
@@ -15,6 +15,6 @@ export function EditablePage({ slug }) {
   usePlugin(form);
   
   return (
-    <ContentFrame slug={slug} form={form} />
+    <RemoteContentFrame slug={slug} form={form} />
   )
 }
